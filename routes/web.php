@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
+Route::get('/J',function (){
+    return view('dashboard2') ;
+});
+
+Route::get('/D',function (){
+    return view('dashboard3') ;
+});
+
 Route::get('/',function (){
     return view('dashboard') ;
 });
