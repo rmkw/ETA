@@ -34,6 +34,9 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        DB::statement("SELECT AddGeometryColumn('public', 'lotes', 'comp_geo', 4326, 'POINT', 2)");
+        DB::statement('CREATE INDEX sidx_lotes_geom ON lotes USING GIST (comp_geo)');
     }
 
     /**

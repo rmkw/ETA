@@ -14,8 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('lotes_fuentes', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_lote_fuente');
+            $table->unsignedInteger('id_lote');
+            $table->foreign('id_lote')->references('id_lote')->on('lotes');
+            $table->unsignedInteger('id_fuente');
+            $table->foreign('id_fuente')->references('id_fuente')->on('fuentes');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

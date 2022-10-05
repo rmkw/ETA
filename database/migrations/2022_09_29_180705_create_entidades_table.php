@@ -14,13 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('entidades', function (Blueprint $table) {
+            $table->id();
             $table->char('cve_ent',2);
             $table->unsignedInteger('anio');
-            $table->char('nombre_ent', 64);
+            $table->string('nombre_ent');
 //            $table-> GEOM
             $table->timestamps();
             $table->softDeletes();
         });
+
+        DB::statement("SELECT AddGeometryColumn('public', 'entidades', 'geom', 4326, 'POINT', 2)");
+        DB::statement('CREATE INDEX sidx_entidades_geom ON entidades USING GIST (geom)');
     }
 
     /**

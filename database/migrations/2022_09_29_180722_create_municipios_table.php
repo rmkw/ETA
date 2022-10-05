@@ -15,8 +15,18 @@ return new class extends Migration
     {
         Schema::create('municipios', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('id_entidad');
+            $table->foreign('id_entidad')->references('id')->on('entidades');
+            $table->char('cve_mun',3);
+            $table->unsignedInteger('anio');
+            $table->string('nombre_mun');
+//            $table-> GEOM
             $table->timestamps();
+            $table->softDeletes();
         });
+
+        DB::statement("SELECT AddGeometryColumn('public', 'municipios', 'geom', 4326, 'POINT', 2)");
+        DB::statement('CREATE INDEX sidx_municipios_geom ON municipios USING GIST (geom)');
     }
 
     /**

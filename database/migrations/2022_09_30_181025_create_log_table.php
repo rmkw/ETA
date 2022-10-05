@@ -14,8 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('log', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_log');
+            $table->text('desc');
+            $table->unsignedInteger('id_usuario');
+            $table->foreign('id_usuario')->references('id_usuario')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

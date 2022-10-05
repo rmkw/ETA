@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('topicos', function (Blueprint $table) {
             $table->id('id_top');
             $table->string('nombre');
-            $table->text('definicion');
+            $table->text('definicion')->nullable();
             $table->unsignedInteger('id_comp');
             $table->foreign('id_comp')->references('id_comp')->on('componentes');
             $table->unsignedInteger('id_sub');
