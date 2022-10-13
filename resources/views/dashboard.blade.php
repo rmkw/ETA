@@ -179,6 +179,7 @@
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000" >
+
                         <div class="row mt-2 d-block w-100">
                             <div class="col-sm-12 mb-3">
                                 <div class="card" style="height: 100%; background-color: #0077CB; box-shadow: 5px 10px 5px darkgray">
@@ -188,14 +189,14 @@
                                                 <div class="row w-100">
                                                     <div class="col-md-9 col-sm-12 ">
                                                         <h4 class="card-title" style="color: #0077CB; text-align: center">¿Qué es el MDEA?</h4>
-                                                        <p class="card-text mb-2" style="color: black;">El <a style="color: #0077CB"  href="https://www.cepal.org/es/publicaciones/46644-marco-desarrollo-estadisticas-ambientales-mdea-2013" target="_blank"><u>MDEA</u></a> es un marco conceptual y estadístico flexible y de usos múltiples,
+                                                        <h6 class="card-text mb-2" style="color: black;">El <a style="color: #0077CB"  href="https://www.cepal.org/es/publicaciones/46644-marco-desarrollo-estadisticas-ambientales-mdea-2013" target="_blank"><u>MDEA</u></a> es un marco conceptual y estadístico flexible y de usos múltiples,
                                                             comprehensivo e integral en su naturaleza y que delimita el alcance de las
                                                             estadísticas ambientales.
                                                             Proporciona una estructura organizativa para guiar la recolección y compilación
                                                             de estadísticas ambientales a escala nacional. Reúne datos de diferentes áreas
                                                             temáticas y fuentes relevantes, abarca los temas y aspectos ambientales que son
                                                             pertinentes para el análisis de las políticas y la toma de decisiones.
-                                                        </p>
+                                                        </h6>
                                                         <p class="card-text mb-0" style="color: black">El objetivo principal del MDEA es guiar la formulación de los programas de estadísticas
                                                             ambientales a través de:
                                                         </p>
@@ -217,7 +218,7 @@
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-3 col-sm-12">
-                                                        <img class="img-fluid"  src="{{asset('/assets/lol.png')}}" alt="My SVG Icon">
+                                                        <img class="img-fluid"  src="{{asset('/assets/logomdea.png')}}" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -228,15 +229,12 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="8000" >
-                        <div class="row justify-content-center w-100">
+                        <div class="row justify-content-center ">
 
-                            <div class="col-md-6 col-sm-12">
-                                <img src="{{asset('/assets/captura.png')}}" class=" w-100" alt="...">
+                            <div class="col-md-12 col-sm-12 ">
+                                <img src="{{asset('/assets/balazo2.png')}}" class="img-fluid" alt="..." style="height: 25rem; display: block; margin: auto;">
                             </div>
-                            <div class="col-md-6 col-sm-12">
 
-                                <img src="{{asset('/assets/1.png')}}" class="" style="height: 25rem" alt="...">
-                            </div>
 
 
                         </div>
@@ -246,7 +244,7 @@
                         <div class="row justify-content-center ">
 
                             <div class="col-md-12 col-ms-12">
-                                <img src="{{asset('/assets/cs.png')}}" class=" w-100" alt="...">
+                                <img src="{{asset('/assets/balazo3.png')}}" class="img-fluid " alt="..." style="height: 25rem; display: block; margin: auto;">
                             </div>
                         </div>
 
@@ -321,7 +319,7 @@
                                 tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
                                 tickLength: 20,
                                 tickWidth: 2,
-                                minorTickInterval: true,
+                                minorTickInterval: null,
                                 labels: {
                                     distance: 20,
                                     style: {
@@ -330,18 +328,33 @@
                                 },
                                 plotBands: [{
                                     from: 0,
+                                    to: 10,
+                                    color: '#43aaff', //
+                                    thickness: 25
+                                },{
+                                    from: 10,
                                     to: 30,
-                                    color: '#6fa8dc', // green
+                                    color: '#088fff', //
                                     thickness: 25
                                 }, {
                                     from: 30,
+                                    to: 50,
+                                    color: '#007ae0', //
+                                    thickness: 25
+                                },{
+                                    from: 50,
                                     to: 70,
-                                    color: '#0077C8', // yellow
+                                    color: '#0065b9', //
                                     thickness: 25
                                 }, {
                                     from: 70,
+                                    to: 90,
+                                    color: '#005092', //
+                                    thickness: 25
+                                },{
+                                    from: 90,
                                     to: 100,
-                                    color: '#003057', // red
+                                    color: '#003057', //
                                     thickness: 25
                                 }]
                             },
@@ -413,7 +426,7 @@
                         Highcharts.chart('container2', {
                             chart: {
                                 type: 'bar',
-                                height: '65%',
+                                height: '78%',
                                 plotShadow: false,
                                 plotBorderWidth: 0,
                             },
@@ -461,11 +474,11 @@
                             legend: {
 
                                 layout: 'vertical',
-                                align: 'right',
-                                verticalAlign: 'top',
+                                align: 'center',
+                                verticalAlign: 'bottom',
                                 x: 10,
-                                y: 40,
-                                floating: true,
+                                y: 10,
+                                floating: false,
                                 borderWidth: 1,
                                 backgroundColor:
                                     Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
@@ -528,7 +541,7 @@
             <div class="container">
                 <div class="row mt-1 w-100">
                     <div class="col-sm-4 card1 ">
-                        <img src="{{asset('/assets/lluvia.png')}}" class="img-fluid" style="max-width: 18%; height: auto" alt="...">
+                        <img src="{{asset('/assets/componente1.png')}}" class="img-fluid" style="max-width: 18%; height: auto" alt="...">
                         <div class="row">
                             <div class="col">
                                 <h4 class="mt-2" >Condiciones y calidad ambiental</h4>
@@ -540,7 +553,7 @@
 
                     </div>
                     <div class="col-sm-4 card1">
-                        <img src="{{asset('/assets/a2.png')}}" class="img-fluid " style="max-width: 18%; height: auto" alt="...">
+                        <img src="{{asset('/assets/componente2.png')}}" class="img-fluid " style="max-width: 18%; height: auto" alt="...">
                         <div class="row">
                             <div class="col">
                                 <h4 class="mt-2">Recursos ambientales y su uso</h4>
@@ -552,11 +565,11 @@
 
                     </div>
                     <div class="col-sm-4 card1">
-                        <img src="{{asset('/assets/r3.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
+                        <img src="{{asset('/assets/componente3.png')}}" class="img-fluid" style="max-width: 18%; height: auto" alt="...">
                         <div class="row">
                             <div class="col">
                                 <h4 class="mt-2">Residuos</h4>
-                                <h6 class="" style="margin-bottom: 2.6rem; color: #706F6F">Características, manejo y liberación de residuos.</h6>
+                                <h6 class="" style="margin-bottom: 3.2rem; color: #706F6F">Características, manejo y liberación de residuos.</h6>
                             </div>
                         </div>
 
@@ -569,14 +582,14 @@
 
                 <div class="row mt-4">
                     <div class="col-sm-4 card1">
-                        <img src="{{asset('/assets/c4.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
+                        <img src="{{asset('/assets/componente4.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
                         <h4 class="mt-2 card-title">Eventos extremos y desastres</h4>
                         <h6 class="" style="margin-bottom: 6.5rem; color: #706F6F">Ocurrencias e impacto de desastres naturales.</h6>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
 
                     </div>
                     <div class="col-sm-4 card1">
-                        <img src="{{asset('/assets/c5.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
+                        <img src="{{asset('/assets/componente5.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
                         <h4 class="mt-2">Asentamientos humanos y salud ambiental</h4>
                         <h6 class="" style="margin-bottom: 3rem; color: #706F6F">Condiciones, servicios básicos e infraestructura de asentamientos humanos.</h6>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
@@ -584,7 +597,7 @@
 
                     </div>
                     <div class="col-sm-4 card1">
-                        <img src="{{asset('/assets/c6.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
+                        <img src="{{asset('/assets/componente6.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
                         <h4 class="mt-2">Protección, gestión y participación</h4>
                         <h6 class="" style="margin-bottom: 6rem; color: #706F6F">Información, protección, gestión y conciencia ambiental.</h6>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
@@ -604,6 +617,7 @@
 
         </div>
     </div>
+
 
 
 
