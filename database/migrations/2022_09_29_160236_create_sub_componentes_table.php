@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('sub_componentes', function (Blueprint $table) {
-            $table->id('id_sub');
+            $table->id('id');
+            $table->unsignedInteger('id_sub');
             $table->string('nombre');
             $table->text('definicion')->nullable();
             $table->unsignedInteger('id_comp');

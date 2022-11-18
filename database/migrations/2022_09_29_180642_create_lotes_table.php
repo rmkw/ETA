@@ -26,11 +26,11 @@ return new class extends Migration
             $table->unsignedInteger('id_comp');
             $table->foreign('id_comp')->references('id_comp')->on('componentes');
             $table->unsignedInteger('id_sub');
-            $table->foreign('id_sub')->references('id_sub')->on('sub_componentes');
+            $table->foreign('id_sub')->references('id')->on('sub_componentes');
             $table->unsignedInteger('id_top');
-            $table->foreign('id_top')->references('id_top')->on('topicos');
+            $table->foreign('id_top')->references('id')->on('topicos');
             $table->unsignedInteger('id_var');
-            $table->foreign('id_var')->references('id_var')->on('variables');
+            $table->foreign('id_var')->references('id')->on('variables');
             $table->timestamps();
             $table->softDeletes();
         });

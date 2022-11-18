@@ -14,13 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('topicos', function (Blueprint $table) {
-            $table->id('id_top');
+            $table->id('id');
+            $table->unsignedInteger('id_top');
             $table->string('nombre');
             $table->text('definicion')->nullable();
             $table->unsignedInteger('id_comp');
             $table->foreign('id_comp')->references('id_comp')->on('componentes');
             $table->unsignedInteger('id_sub');
-            $table->foreign('id_sub')->references('id_sub')->on('sub_componentes');
+            $table->foreign('id_sub')->references('id')->on('sub_componentes');
             $table->timestamps();
             $table->softDeletes();
         });

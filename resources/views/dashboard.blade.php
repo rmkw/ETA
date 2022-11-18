@@ -150,7 +150,7 @@
 
                 <div class="col-md-4 col-sm-12 ">
                     <ul class="nav col ">
-                        <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Homes</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">More</a></li>
                         <button type="button" class="btn btn-outline-light me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -544,8 +544,8 @@
                         <img src="{{asset('/assets/componente1.png')}}" class="img-fluid" style="max-width: 18%; height: auto" alt="...">
                         <div class="row">
                             <div class="col">
-                                <h4 class="mt-2" >Condiciones y calidad ambiental</h4>
-                                <h6 class="" style="margin-bottom: 2rem; color: #706F6F">Características físicas, biológicas y químicas ambientales.</h6>
+                                <h4 class="mt-2" >{{$componentes[0]->nombre}}</h4>
+                                <h6 class="" style="margin-bottom: 2rem; color: #706F6F">{{$componentes[0]->def_corta}}</h6>
                             </div>
                         </div>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
@@ -556,8 +556,8 @@
                         <img src="{{asset('/assets/componente2.png')}}" class="img-fluid " style="max-width: 18%; height: auto" alt="...">
                         <div class="row">
                             <div class="col">
-                                <h4 class="mt-2">Recursos ambientales y su uso</h4>
-                                <h6 class="" style="margin-bottom: 3.2rem; color: #706F6F">Extracción, uso y retorno de recursos naturales.</h6>
+                                <h4 class="mt-2">{{$componentes[1]->nombre}}</h4>
+                                <h6 class="" style="margin-bottom: 3.2rem; color: #706F6F">{{$componentes[1]->def_corta}}</h6>
                             </div>
                         </div>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
@@ -568,11 +568,10 @@
                         <img src="{{asset('/assets/componente3.png')}}" class="img-fluid" style="max-width: 18%; height: auto" alt="...">
                         <div class="row">
                             <div class="col">
-                                <h4 class="mt-2">Residuos</h4>
-                                <h6 class="" style="margin-bottom: 3.2rem; color: #706F6F">Características, manejo y liberación de residuos.</h6>
+                                <h4 class="mt-2">{{$componentes[2]->nombre}}</h4>
+                                <h6 class="" style="margin-bottom: 3.2rem; color: #706F6F">{{$componentes[2]->def_corta}}</h6>
                             </div>
                         </div>
-
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
 
 
@@ -583,23 +582,23 @@
                 <div class="row mt-4">
                     <div class="col-sm-4 card1">
                         <img src="{{asset('/assets/componente4.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
-                        <h4 class="mt-2 card-title">Eventos extremos y desastres</h4>
-                        <h6 class="" style="margin-bottom: 6.5rem; color: #706F6F">Ocurrencias e impacto de desastres naturales.</h6>
+                        <h4 class="mt-2 card-title">{{$componentes[3]->nombre}}</h4>
+                        <h6 class="" style="margin-bottom: 6.5rem; color: #706F6F">{{$componentes[3]->def_corta}}</h6>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
 
                     </div>
                     <div class="col-sm-4 card1">
                         <img src="{{asset('/assets/componente5.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
-                        <h4 class="mt-2">Asentamientos humanos y salud ambiental</h4>
-                        <h6 class="" style="margin-bottom: 3rem; color: #706F6F">Condiciones, servicios básicos e infraestructura de asentamientos humanos.</h6>
+                        <h4 class="mt-2">{{$componentes[4]->nombre}}</h4>
+                        <h6 class="" style="margin-bottom: 3rem; color: #706F6F">{{$componentes[4]->def_corta}}</h6>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
 
 
                     </div>
                     <div class="col-sm-4 card1">
                         <img src="{{asset('/assets/componente6.png')}}" class="img-fluid" style="max-width: 20%; height: auto" alt="...">
-                        <h4 class="mt-2">Protección, gestión y participación</h4>
-                        <h6 class="" style="margin-bottom: 6rem; color: #706F6F">Información, protección, gestión y conciencia ambiental.</h6>
+                        <h4 class="mt-2">{{$componentes[5]->nombre}}</h4>
+                        <h6 class="" style="margin-bottom: 6rem; color: #706F6F">{{$componentes[0]->def_corta}}</h6>
                         <hr  style="opacity: 100; border: 3px solid #0077CB ">
 
 
