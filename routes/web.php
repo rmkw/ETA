@@ -17,6 +17,9 @@ use App\Http\Controllers\HomeController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/2',function (){
+    return view('two') ;
+});
 
 Route::get('/J',function (){
     return view('dashboard2') ;
@@ -29,5 +32,8 @@ Route::get('/D',function (){
 Route::get('/',function (){
     return view('dashboard') ;
 });
+<<<<<<< Updated upstream
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+=======
+>>>>>>> Stashed changes
