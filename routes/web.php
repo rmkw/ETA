@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComponentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -32,8 +33,6 @@ Route::get('/D',function (){
 Route::get('/',function (){
     return view('dashboard') ;
 });
-<<<<<<< Updated upstream
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-=======
->>>>>>> Stashed changes
+Route::get('/componentes', [ComponentController::class, 'index'])->name('componentes');
