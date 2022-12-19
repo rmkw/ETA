@@ -26,13 +26,14 @@ Route::get('/J',function (){
     return view('dashboard2') ;
 });
 
-Route::get('/D',function (){
-    return view('dashboard3') ;
-});
 
-Route::get('/',function (){
-    return view('dashboard') ;
-});
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/componentes', [ComponentController::class, 'index'])->name('componentes');
+Route::get('/d', [ComponentController::class, 'index2'])->name('componentes2');
+
+Route::get('/search', [ComponentController::class, 'search'])->name('busqueda');
+
+Route::get('/traer', [ComponentController::class, 'getInfo']);
+Route::get('/traerSub', [ComponentController::class, 'getInfoSub']);
+Route::get('/traerTop', [ComponentController::class, 'getInfoTop']);
+Route::get('/traerVar', [ComponentController::class, 'getInfoVar']);

@@ -15,6 +15,7 @@ class Componente extends Model
      * @var string
      */
     protected $table = 'componentes';
+    protected $primaryKey = 'id_comp';
 
     /**
      * The attributes that are mass assignable.

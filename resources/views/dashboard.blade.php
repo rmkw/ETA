@@ -60,7 +60,8 @@
 
         </style>
 
-        <title>ETA</title>
+        <title>Eje Temático del Agua</title>
+        <link rel="shortcut icon" href="assets/logomdea.png" type="image/x-icon">
 
         <!-- Fonts -->
 
@@ -111,7 +112,7 @@
 
         <style>
             body {
-                font-family: 'Helvetica-Normal', sans-serif;
+                /*font-family: 'Helvetica-Normal', sans-serif;*/
             }
             .card1{
 
@@ -152,8 +153,8 @@
 
                 <div class="col-md-4 col-sm-12 ">
                     <ul class="nav col ">
-                        <li><a href="#" class="nav-link px-2 text-white">Homes</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white" onclick="window.location='{{@route("dashboard")}}'">Homes</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white" onclick="window.location='{{@route("busqueda")}}'">Features</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">More</a></li>
                         <button type="button" class="btn btn-outline-light me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -182,59 +183,27 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000" >
 
-                        <div class="row mt-2 d-block w-100">
-                            <div class="col-sm-12 mb-3">
-                                <div class="card" style="height: 100%; background-color: #0077CB; box-shadow: 5px 10px 5px darkgray">
-                                    <div class="card-body">
-                                        <div class="card " style="height: 100%; background-color: #ffffff">
-                                            <div class="card-body">
-                                                <div class="row w-100">
-                                                    <div class="col-md-9 col-sm-12 ">
-                                                        <h4 class="card-title" style="color: #0077CB; text-align: center">¿Qué es el MDEA?</h4>
-                                                        <h6 class="card-text mb-2" style="color: black;">El <a style="color: #0077CB"  href="https://www.cepal.org/es/publicaciones/46644-marco-desarrollo-estadisticas-ambientales-mdea-2013" target="_blank"><u>MDEA</u></a> es un marco conceptual y estadístico flexible y de usos múltiples,
-                                                            comprehensivo e integral en su naturaleza y que delimita el alcance de las
-                                                            estadísticas ambientales.
-                                                            Proporciona una estructura organizativa para guiar la recolección y compilación
-                                                            de estadísticas ambientales a escala nacional. Reúne datos de diferentes áreas
-                                                            temáticas y fuentes relevantes, abarca los temas y aspectos ambientales que son
-                                                            pertinentes para el análisis de las políticas y la toma de decisiones.
-                                                        </h6>
-                                                        <p class="card-text mb-0" style="color: black">El objetivo principal del MDEA es guiar la formulación de los programas de estadísticas
-                                                            ambientales a través de:
-                                                        </p>
-                                                        <ul style="color: black">
-                                                            <li>
-                                                                Definir el alcance de las estadísticas ambientales e identificar
-                                                                sus componentes.
-                                                            </li>
-                                                            <li>
-                                                                Contribuir a la evaluación de las necesidades de datos, fuentes, disponibilidad y brechas.
-                                                            </li>
-                                                            <li>
-                                                                Guiar el desarrollo de los procesos multi propósito de recolección de
-                                                                datos y bases de datos.
-                                                            </li>
-                                                            <li>
-                                                                Apoyar en la coordinación y organización de estadísticas ambientales, dado el carácter inter-institucional de dicho ámbito.
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-12">
-                                                        <img class="img-fluid"  src="{{asset('/assets/logomdea.png')}}" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="row  d-block w-100">
+                            <div class="col-sm-12 mb-3 row justify-content-center">
+                                <img src="{{asset('/assets/Slider1.gif')}}" class="img-fluid" alt="..." style="height: auto; width: 50rem; display: block; margin: auto;">
+
                             </div>
                         </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000" >
+                        <div class="row  d-block w-100">
+                            <div class="col-sm-12 mb-3 row justify-content-center">
+                                <img src="{{asset('/assets/Slider2.gif')}}" class="img-fluid" alt="..." style="height: auto; width: 50rem; display: block; margin: auto;">
+
+                            </div>
+                        </div>
+
                     </div>
                     <div class="carousel-item" data-bs-interval="8000" >
                         <div class="row justify-content-center ">
 
                             <div class="col-md-12 col-sm-12 ">
-                                <img src="{{asset('/assets/balazo2.png')}}" class="img-fluid" alt="..." style="height: 25rem; display: block; margin: auto;">
+                                <img src="{{asset('/assets/Slider4.gif')}}" class="img-fluid" alt="..." style="height: 25rem; display: block; margin: auto;">
                             </div>
 
 
@@ -246,7 +215,7 @@
                         <div class="row justify-content-center ">
 
                             <div class="col-md-12 col-ms-12">
-                                <img src="{{asset('/assets/balazo3.png')}}" class="img-fluid " alt="..." style="height: 25rem; display: block; margin: auto;">
+                                <img src="{{asset('/assets/Slider5.gif')}}" class="img-fluid " alt="..." style="height: 25rem; display: block; margin: auto;">
                             </div>
                         </div>
 
