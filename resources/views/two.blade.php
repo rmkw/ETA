@@ -256,7 +256,7 @@
             <li class=""
                 onclick="clickComponent()">
                 <button class="btn-toggle d-inline-flex align-items-center collapsed
-                    text-sm-start ps-2 py-2" style="border: 0;"
+                    text-sm-start ps-2 py-3" style="border: 0;"
 
                         data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#comp_{{$componente->id_comp}}">
                     {{$componente->id_comp.'.- '.$componente->nombre}}
@@ -330,7 +330,7 @@
     </div>
 
 
-    <div class="container-fluid scrollarea">
+    <div class="container-fluid scrollarea" style=" background: rgba(248,249,252,0.55) !important;">
         <div class="row">
             <div class="col-md-6">
                 <label for="country" class="form-label">Año</label>
